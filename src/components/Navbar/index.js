@@ -27,7 +27,7 @@ const Navbar = (props) => {
               {/* <!-- End Logo --> */}
 
               <div className='d-inline-block g-hidden-md-down g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg'>
-                <a className='btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15' href='https://wrapbootstrap.com/theme/unify-responsive-website-template-WB0412697?ref=htmlstream'>Contact Me</a>
+                <a className='btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15' href='/'>Contact Me</a>
               </div>
             </div>
           </nav>

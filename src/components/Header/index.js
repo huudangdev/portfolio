@@ -5,12 +5,11 @@ const Header = (props) => {
     <>
       <header id='home'>
         {/* <!-- Promo Block --> */}
-        <section className='dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall' data-options={{ animationDuration: 25, direction: 'fromtop' }}>
+        <section id='home' className='dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall' data-options={{ animationDuration: 25, direction: 'fromtop' }}>
           {/* direction: 'reverse' */}
           {/* <!-- Parallax Image --> */}
-          <div className='divimage dzsparallaxer--target w-100' style={{ height: '140%', backgroundImage: 'url(../../assets/img-temp/logo-2.jpg)' }} />
+          {/* <div className='divimage dzsparallaxer--target w-100' style={{ height: '140%', backgroundImage: 'url(../../assets/img-temp/logo-2.jpg)' }} /> */}
           {/* <!-- End Parallax Image --> */}
-
           {/* <!-- Promo Block Content --> */}
           <div className='container g-color-white g-py-200'>
             <h3 className='g-color-instagram g-font-size-40 g-font-weight-400 text-uppercase mb-2'>Nguyen Tran Huu Dang</h3>

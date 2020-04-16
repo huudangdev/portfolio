@@ -5,6 +5,8 @@ import Header from '../../components/Header'
 import Intro from '../../components/Intro'
 import Testimonial from '../../components/Testimonial'
 import Project from '../../components/Project'
+import Contact from '../../components/Contact'
+import Footer from '../../components/Footer'
 
 const About = () => {
   return (
@@ -14,6 +16,8 @@ const About = () => {
       <Intro />
       <Testimonial />
       <Project />
+      <Contact />
+      <Footer />
 
       <a
         className='js-go-to u-go-to-v1'

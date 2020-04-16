@@ -23,10 +23,10 @@ const Project = () => {
           {/* <!-- Cubeportfolio Filter --> */}
           <ul id='filterControls' className='text-center u-filter-v1 g-mb-40'>
             <li className='list-inline-item cbp-filter-item cbp-filter-item-active g-cursor-pointer g-transition-0_2' data-filter='*'>All</li>
-            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-illustration'>Illustration</li>
-            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-design'>Design</li>
-            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-graphic'>Graphic</li>
-            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-logo'>Logo</li>
+            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-illustration'>Projects</li>
+            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-design'>Tools</li>
+            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-graphic'>Mobile</li>
+            <li className='list-inline-item cbp-filter-item text-uppercase g-cursor-pointer g-transition-0_2' data-filter='.js-logo'>Deploy Business</li>
           </ul>
           {/* <!-- End Cubeportfolio Filter --> */}
 
@@ -36,14 +36,14 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img13.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../../public/assets/img-temp/400x270/img13.jpg' alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-1.html' />
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Logo</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}
@@ -62,7 +62,7 @@ const Project = () => {
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Logo</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}
@@ -81,7 +81,7 @@ const Project = () => {
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Illustration</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}
@@ -100,7 +100,7 @@ const Project = () => {
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Design</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}
@@ -119,7 +119,7 @@ const Project = () => {
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Graphic</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}
@@ -138,7 +138,7 @@ const Project = () => {
 
                 {/* <!-- Figure Caption --> */}
                 <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>Kathy Reyes</h4>
+                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
                   <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Design</em>
                 </figcaption>
                 {/* <!-- End Figure Caption--> */}

@@ -147,3 +147,27 @@
    background: rgba(255, 255, 255, .9);
    cursor: default;
 }
+
+#home {
+  background: #1F1F1F url(../img-temp/backgroundHome.jpg) no-repeat center center;
+  background-size: cover !important;
+ -webkit-background-size: cover !important;
+  background-attachment: fixed;
+
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#contact {
+  background: #1F1F1F url(../img/bg/pattern4.png) no-repeat center center;
+  background-size: cover !important;
+ -webkit-background-size: cover !important;
+  /* background-attachment: fixed; */
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
