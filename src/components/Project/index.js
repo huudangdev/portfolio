@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Sample from '../../images/pattern4.png'
+
 const Project = () => {
   return (
     <>
@@ -36,7 +38,7 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../../public/assets/img-temp/400x270/img13.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-1.html' />
@@ -55,7 +57,10 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img14.jpg' alt='Image Description' />
+                <img
+                  className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description'
+                  style={{ display: 'block', maxWidth: '800px', maxHeight: '800px', width: 'auto', height: 'auto' }}
+                />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-2.html' />
@@ -74,7 +79,7 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img15.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-3.html' />
@@ -93,7 +98,7 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img16.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-4.html' />
@@ -112,7 +117,7 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img9.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-5.html' />
@@ -131,7 +136,7 @@ const Project = () => {
               {/* <!-- Figure --> */}
               <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                 {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src='../../assets/img-temp/400x270/img10.jpg' alt='Image Description' />
+                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
                 {/* <!-- End Figure Image--> */}
 
                 <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-6.html' />

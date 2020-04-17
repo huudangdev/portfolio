@@ -20,8 +20,8 @@ const Navbar = (props) => {
 
               {/* <!-- Logo --> */}
               <a href='/' className='navbar-brand d-flex'>
-                <h2 className='h2 g-color-black g-font-weight-200 g-mb-10'>
-                  <span className='g-color-teal'>/Why you’d want to go on a date</span> with me !
+                <h2 className='h2 g-color-black g-font-weight-100 g-mb-10'>
+                  {/* <span className='g-color-teal'>/Why you’d want to go on a date</span> with me ! */}
                 </h2>
               </a>
               {/* <!-- End Logo --> */}
