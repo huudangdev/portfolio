@@ -53,9 +53,9 @@ const Intro = (props) => {
               {/* <!-- End Progress Bar v2 --> */}
 
               {/* <!-- Progress Bar v2 --> */}
-              <h4 className='h6 g-mb-5'>React Js - 76%</h4>
+              <h4 className='h6 g-mb-5'>React Js - 50%</h4>
               <div className='js-hr-progress-bar progress rounded-0 g-height-4 g-mb-30'>
-                <div className='js-hr-progress-bar-indicator progress-bar' role='progressbar' style={{ width: '76%', ariaValuenow: '76', ariaValuemin: '0', ariaValuemax: '100' }} />
+                <div className='js-hr-progress-bar-indicator progress-bar' role='progressbar' style={{ width: '50%', ariaValuenow: '50', ariaValuemin: '0', ariaValuemax: '100' }} />
               </div>
               {/* <!-- End Progress Bar v2 --> */}
 

@@ -20,14 +20,14 @@ const Navbar = (props) => {
 
               {/* <!-- Logo --> */}
               <a href='/' className='navbar-brand d-flex'>
-                <h2 className='h2 g-color-black g-font-weight-200 g-mb-10'>
-                  <span className='g-color-teal'>/Why you’d want to go on a date</span> with me !
+                <h2 className='h2 g-color-black g-font-weight-100 g-mb-10'>
+                  {/* <span className='g-color-teal'>/Why you’d want to go on a date</span> with me ! */}
                 </h2>
               </a>
               {/* <!-- End Logo --> */}
 
               <div className='d-inline-block g-hidden-md-down g-pos-rel g-valign-middle g-pl-30 g-pl-0--lg'>
-                <a className='btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15' href='https://wrapbootstrap.com/theme/unify-responsive-website-template-WB0412697?ref=htmlstream'>Contact Me</a>
+                <a className='btn u-btn-outline-primary g-font-size-13 text-uppercase g-py-10 g-px-15' href='/'>Contact Me</a>
               </div>
             </div>
           </nav>
