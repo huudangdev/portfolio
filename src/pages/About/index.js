@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Navbar from '../../components/Navbar'
-import Header from '../../components/Header'
+import Promo from '../../components/Promo'
 import Intro from '../../components/Intro'
 import Testimonial from '../../components/Testimonial'
 import Project from '../../components/Project'
@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <Header />
+      <Promo />
       <Intro />
       <Testimonial />
       <Project />
