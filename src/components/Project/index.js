@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Sample from '../../images/pattern4.png'
+import Sample from '../../images/projects/projectSample.jpg'
 
 const Project = () => {
   return (

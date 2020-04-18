@@ -7,13 +7,15 @@ import Testimonial from '../../components/Testimonial'
 import Project from '../../components/Project'
 import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
+import Figure from '../../components/Figure'
 
 const About = () => {
   return (
     <>
       {/* <Navbar /> */}
       <Promo />
-      <Intro />
+      {/* <Intro /> */}
+      <Figure />
       <Testimonial />
       <Project />
       <Contact />
