@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from '../../images/wall.jpg'
+import Background from '../../images/wall-min.jpg'
 
 const Promo = (props) => {
   return (

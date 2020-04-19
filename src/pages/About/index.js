@@ -7,6 +7,7 @@ import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
 import Figure from '../../components/Figure'
 import Technicals from '../../components/Technicals'
+import Timeline from '../../components/Timeline'
 
 const About = () => {
   return (
@@ -14,6 +15,7 @@ const About = () => {
       <Promo />
       <Figure />
       <Technicals />
+      <Timeline />
       <Project />
       <Testimonial />
       <Contact />

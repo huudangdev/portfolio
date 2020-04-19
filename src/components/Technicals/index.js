@@ -10,7 +10,7 @@ const Technicals = () => {
               <div className='text-center'>
                 <h2 className='h3 g-color-black text-uppercase mb-2'>what i'm good at ?</h2>
                 <div className='d-inline-block g-width-35 g-height-2 g-bg-primary mb-2' />
-                <p className='mb-0'>
+                <p className='mb-0 g-font-weight-300'>
                 I'm not only a tinkerer but i'm also interested in playing around with new technologies.
                 </p>
               </div>
@@ -37,7 +37,7 @@ const Technicals = () => {
                 </span>
                 <i className='fa fa-github float-right g-font-size-20 g-ml-15' />
               </a>
-              <a href='#projects' className='smoothscroll btn btn-l u-btn-outline-teal u-btn-hover-v2-2 g-letter-spacing-0_5 g-rounded-50 g-px-20 g-mr-4 g-mb-5'>
+              <a href='#timeline' className='smoothscroll btn btn-l u-btn-outline-teal u-btn-hover-v2-2 g-letter-spacing-0_5 g-rounded-50 g-px-20 g-mr-4 g-mb-5'>
                 <span className='pull-left text-left'>
                   Continue |
                 </span>
@@ -46,7 +46,7 @@ const Technicals = () => {
             <div className='col-lg-6'>
               <div className='mb-4'>
                 <div className='d-flex justify-content-between'>
-                  <h6 className='text-uppercase g-font-weight-230'>W e b  D e s i g n</h6>
+                  <h6 className='text-uppercase g-font-weight-300 g-color-cyan'>W e b  D e s i g n</h6>
                   <span className='ml-auto'>65%</span>
                 </div>
                 <div className='js-hr-progress-bar progress g-height-2 rounded-0'>
@@ -56,7 +56,7 @@ const Technicals = () => {
 
               <div className='mb-4'>
                 <div className='d-flex justify-content-between'>
-                  <h6 className='text-uppercase g-font-weight-230'>R e a c t</h6>
+                  <h6 className='text-uppercase g-font-weight-300 g-color-aqua'>R e a c t</h6>
                   <span className='ml-auto'>70%</span>
                 </div>
                 <div className='js-hr-progress-bar progress g-height-2 rounded-0'>
@@ -66,7 +66,7 @@ const Technicals = () => {
 
               <div className='mb-4'>
                 <div className='d-flex justify-content-between'>
-                  <h6 className='text-uppercase g-font-weight-230'>N o d e</h6>
+                  <h6 className='text-uppercase g-font-weight-300 g-color-primary'>N o d e</h6>
                   <span className='ml-auto'>75%</span>
                 </div>
                 <div className='js-hr-progress-bar progress g-height-2 rounded-0'>
@@ -76,7 +76,7 @@ const Technicals = () => {
 
               <div className='mb-4'>
                 <div className='d-flex justify-content-between'>
-                  <h6 className='text-uppercase g-font-weight-230'>M o b i l e</h6>
+                  <h6 className='text-uppercase g-font-weight-300 g-color-orange'>M o b i l e</h6>
                   <span className='ml-auto'>55%</span>
                 </div>
                 <div className='js-hr-progress-bar progress g-height-2 rounded-0'>
@@ -86,7 +86,7 @@ const Technicals = () => {
 
               <div className='mb-4'>
                 <div className='d-flex justify-content-between'>
-                  <h6 className='text-uppercase g-font-weight-230'>G i t</h6>
+                  <h6 className='text-uppercase g-font-weight-300 g-color-brown'>G i t</h6>
                   <span className='ml-auto'>85%</span>
                 </div>
                 <div className='js-hr-progress-bar progress g-height-2 rounded-0'>
