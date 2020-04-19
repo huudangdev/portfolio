@@ -1,23 +1,21 @@
 import React from 'react'
 
-import Navbar from '../../components/Navbar'
 import Promo from '../../components/Promo'
-import Intro from '../../components/Intro'
 import Testimonial from '../../components/Testimonial'
 import Project from '../../components/Project'
 import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
 import Figure from '../../components/Figure'
+import Technicals from '../../components/Technicals'
 
 const About = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <Promo />
-      {/* <Intro /> */}
       <Figure />
-      <Testimonial />
+      <Technicals />
       <Project />
+      <Testimonial />
       <Contact />
       <Footer />
 

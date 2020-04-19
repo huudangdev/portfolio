@@ -5,9 +5,9 @@ import Sample from '../../images/projects/projectSample.jpg'
 const Project = () => {
   return (
     <>
-      <header id='project'>
+      <header id='projects'>
         {/* <!-- Cubeportfolio --> */}
-        <section className='container g-py-100'>
+        <section className='container g-py-50'>
           <div className='row justify-content-center g-mb-60'>
             <div className='col-lg-7'>
               {/* <!-- Heading --> */}
@@ -15,7 +15,7 @@ const Project = () => {
                 <h2 className='h4 text-uppercase mb-3'>CHECK OUT SOME OF MY WORK.</h2>
                 <div className='d-inline-block g-width-60 g-height-1 g-bg-black mb-2' />
                 <p className='mb-0'>
-                I'm not only a tinkerer but i'm also interested in playing around with new technologies.
+                  {/* I'm not only a tinkerer but i'm also interested in playing around with new technologies. */}
                 </p>
               </div>
               {/* <!-- End Heading --> */}
