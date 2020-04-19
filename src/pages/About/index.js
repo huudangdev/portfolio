@@ -19,7 +19,7 @@ const About = () => {
       <Project />
       <Testimonial />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
 
       <a
         className='js-go-to u-go-to-v1'
