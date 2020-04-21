@@ -16,7 +16,7 @@ const Figure = () => {
     <>
       <div id='intro' className='dzsparallaxer auto-init height-is-based-on-content g-bg-gray-gradient-opacity-v1' data-options='{direction: "reverse", animation_duration: "200"}'>
         <div className='dzsparallaxer--target' style={{ width: '100%', height: '120%' }} />
-        <div className='container g-pt-100'>
+        <div className='container g-pt-70'>
           <div className='masonry-grid row mb-5'>
             <div className='masonry-grid-sizer col-sm-1' />
             <div className='masonry-grid-item col-lg-6 g-mb-100'>
