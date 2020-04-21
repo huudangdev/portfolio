@@ -2,16 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta
-      name="description"
-      content="HuuDang 's Portfolio'"
-    />
+    <!-- Primary Meta Tags -->
+    <title>Huu Dang || portfolio </title>
+    <meta name="title" content="Huu Dang || portfolio ">
+    <meta name="description" content="Hi guys, my name is Dang. I'm an interactive developer who currently work in Ho Chi Minh city.">
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://huudangdev.github.io/portfolio/">
+    <meta property="og:title" content="Huu Dang || portfolio ">
+    <meta property="og:description" content="Hi guys, my name is Dang. I'm an interactive developer who currently work in Ho Chi Minh city.">
+    <meta property="og:image" content="https://huudangdev.github.io/portfolio/static/media/me-1.57d201d2.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://huudangdev.github.io/portfolio/">
+    <meta property="twitter:title" content="Huu Dang || portfolio ">
+    <meta property="twitter:description" content="Hi guys, my name is Dang. I'm an interactive developer who currently work in Ho Chi Minh city.">
+    <meta property="twitter:image" content="https://huudangdev.github.io/portfolio/static/media/me-1.57d201d2.jpg">
+
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -27,6 +41,9 @@
     <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/hs-megamenu/src/hs.megamenu.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/icon-hs/style.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/fancybox/jquery.fancybox.css">
 
     <!-- CSS Unify -->
     <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/unify-core.css">
@@ -44,7 +61,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>H u u D a n g  's  P o r t f o l i o</title>
+    <title>Huu Dang | p o r t f o l i o</title>
   </head>
   <body>
     <div id="root"></div>
@@ -63,6 +80,13 @@
     <script src="%PUBLIC_URL%/assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
     <script src="%PUBLIC_URL%/assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
     <script src="%PUBLIC_URL%/assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/typedjs/typed.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/masonry/dist/masonry.pkgd.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/hs-bg-video/vendor/player.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+
 
     <!-- JS Unify -->
     <script src="%PUBLIC_URL%/assets/js/hs.core.js"></script>
@@ -72,18 +96,45 @@
     <script src="%PUBLIC_URL%/assets/js/components/hs.progress-bar.js"></script>
     <script src="%PUBLIC_URL%/assets/js/components/hs.cubeportfolio.js"></script>
     <script src="%PUBLIC_URL%/assets/js/components/hs.go-to.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/components/hs.carousel.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/components/hs.onscroll-animation.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/components/hs.popup.js"></script>
+    <script src="%PUBLIC_URL%/assets/js/components/hs.counter.js"></script>
 
     <!-- JS Customization -->
     <script src="%PUBLIC_URL%/assets/js/custom.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
-      $(document).on('ready', function () {
+      $(document).on('ready', function () {  
+          // initialization of scroll animation
+          $.HSCore.components.HSOnScrollAnimation.init('[data-animation]');
+          // initialization of popups
+          $.HSCore.components.HSPopup.init('.js-fancybox');
+          // initialization of counters
+          let counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]');
           // initialization of tabs
           $.HSCore.components.HSTabs.init('[role="tablist"]');
-
           // initialization of go to
           $.HSCore.components.HSGoTo.init('.js-go-to');
+          // initialization of carousel
+          $.HSCore.components.HSCarousel.init('.js-carousel');
+
+          // initialization of masonry
+          $('.masonry-grid').imagesLoaded().then(function () {
+            $('.masonry-grid').masonry({
+              columnWidth: '.masonry-grid-sizer',
+              itemSelector: '.masonry-grid-item',
+              percentPosition: true
+            });
+          });
+
+          // initialization of text animation (typing)
+          $(".u-text-animation.u-text-animation--typing").typed({
+            strings: ["inspired", "creative", "resolve", "huu dang"],
+            typeSpeed: 100
+          });
+
         });
 
         $(window).on('load', function () {
@@ -102,7 +153,7 @@
           $.HSCore.components.HSCubeportfolio.init('.cbp');
 
           // initialization of horizontal progress bars
-          var horizontalProgressBars = $.HSCore.components.HSProgressBar.init('.js-hr-progress-bar', {
+          let horizontalProgressBars = $.HSCore.components.HSProgressBar.init('.js-hr-progress-bar', {
             direction: 'horizontal',
             indicatorSelector: '.js-hr-progress-bar-indicator'
           });

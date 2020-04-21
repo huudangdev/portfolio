@@ -1,23 +1,23 @@
 import React from 'react'
 
-import Navbar from '../../components/Navbar'
-import Header from '../../components/Header'
-import Intro from '../../components/Intro'
+import Promo from '../../components/Promo'
 import Testimonial from '../../components/Testimonial'
 import Project from '../../components/Project'
 import Contact from '../../components/Contact'
-import Footer from '../../components/Footer'
+import Figure from '../../components/Figure'
+import Technicals from '../../components/Technicals'
+import Timeline from '../../components/Timeline'
 
 const About = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <Header />
-      <Intro />
-      <Testimonial />
+      <Promo />
+      <Figure />
+      <Technicals />
+      <Timeline />
       <Project />
+      <Testimonial />
       <Contact />
-      <Footer />
 
       <a
         className='js-go-to u-go-to-v1'
