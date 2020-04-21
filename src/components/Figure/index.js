@@ -22,9 +22,9 @@ const Figure = () => {
             <div className='masonry-grid-item col-lg-6 g-mb-100'>
               <div className='g-pr-40--lg'>
                 <span className='d-block g-color-cyan g-font-size-10 g-font-weight-300 text-uppercase mb-4'>#Why you’d want to go on a date with me</span>
-                <h3 className='h3 g-color-black g-font-weight-300 mb-4'>
-                Hi guys, my name is Dang.
-                </h3>
+                <h4 className='h4 g-color-black g-font-weight-205 mb-4'>
+                Don’t I know you from somewhere? Probably not. So let me introduce myself: Hi, I’m Dang.
+                </h4>
                 <p className='lead mb-5 g-font-weight-250'>
               I always search for happiness not through things, but through life itself. By incorporating minimalism into my life, I’ve finally been able to find lasting happiness.
                 </p>
@@ -100,7 +100,7 @@ const Figure = () => {
       </div>
       {
         isActive &&
-          <div className='alert alert-dismissible fade show g-bg-teal g-color-white rounded-0' role='alert' style={{ position: 'sticky', top: 0 }}>
+          <div className='alert alert-dismissible fade show g-bg-teal g-color-white rounded-0 u-header u-header--sticky-top u-header--change-appearance' role='alert'>
             <button type='button' className='close u-alert-close--light' data-dismiss='alert' aria-label='Close' onClick={() => setIsActive(false)}>
               <span aria-hidden='true'>×</span>
             </button>
