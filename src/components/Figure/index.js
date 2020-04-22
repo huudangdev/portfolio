@@ -1,22 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import me1 from '../../images/me/me-1.jpg'
 import me2 from '../../images/me/me-2.jpg'
 import me3 from '../../images/me/me-3.jpg'
 
+import moment from 'moment'
+
+const config = require('./data.json')
+
 const Figure = () => {
   const [isActive, setIsActive] = useState(false)
+  const [index, setIndex] = useState({})
 
   const handleOnClick = (event) => {
     event.preventDefault()
     setIsActive(true)
   }
 
+  useEffect(() => {
+    const a = moment([2020, 1, 22])
+    const b = moment()
+    const tmpArg = b.diff(a, 'days')
+    config.viewed = 4 * tmpArg
+    config.contacted = Math.round(tmpArg * 1.5)
+    //
+    config.workingHours = tmpArg * 32
+    setIndex(config)
+  }, [])
+
   return (
     <>
       <div id='intro' className='dzsparallaxer auto-init height-is-based-on-content g-bg-gray-gradient-opacity-v1' data-options='{direction: "reverse", animation_duration: "200"}'>
         <div className='dzsparallaxer--target' style={{ width: '100%', height: '120%' }} />
-        <div className='container g-pt-70'>
+        <div className='container g-pt-50'>
           <div className='masonry-grid row mb-5'>
             <div className='masonry-grid-sizer col-sm-1' />
             <div className='masonry-grid-item col-lg-6 g-mb-100'>
@@ -77,22 +93,22 @@ const Figure = () => {
 
           <div className='row text-center text-uppercase'>
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>52</div>
+              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.viewed}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Viewed</h4>
             </div>
 
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>24</div>
+              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.contacted}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Contacted</h4>
             </div>
 
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>1825</div>
+              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.workingHours}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Working Hours</h4>
             </div>
 
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>40</div>
+              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.projects}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Projects</h4>
             </div>
           </div>

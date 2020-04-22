@@ -6,32 +6,32 @@
  * @requires appear.js (v1.0.3)
  *
  */
-;(function($){
-	'use strict';
+;(function ($) {
+  'use strict'
 
-	$.HSCore.components.HSCounter = {
+  $.HSCore.components.HSCounter = {
 
-		/**
+    /**
 		 *
 		 *
 		 * @var Object _baseConfig
 		 */
-		_baseConfig : {
-			bounds: -100,
-			debounce: 10,
-			time: 6000,
-			fps: 60,
-			commaSeparated: false
-		},
+    _baseConfig: {
+      bounds: -100,
+      debounce: 10,
+      time: 5000,
+      fps: 60,
+      commaSeparated: false
+    },
 
-		/**
+    /**
 		 *
 		 *
 		 * @var jQuery _pageCollection
 		 */
-		_pageCollection : $(),
+    _pageCollection: $(),
 
-		/**
+    /**
 		 * Initialization of Counter wrapper.
 		 *
 		 * @param String selector (optional)
@@ -39,182 +39,152 @@
 		 *
 		 * @return jQuery pageCollection - collection of initialized items.
 		 */
-		init: function(selector, config){
+    init: function (selector, config) {
+      this.collection = $(selector) && $(selector).length ? $(selector) : $()
+      if (!this.collection.length) return
 
-			this.collection = $(selector) && $(selector).length ? $(selector) : $();
-			if(!this.collection.length) return;
+      this.config = config && $.isPlainObject(config) ? $.extend({}, this._baseConfig, config) : this._baseConfig
+      this.config.itemSelector = selector
 
-			this.config = config && $.isPlainObject(config) ? $.extend({}, this._baseConfig, config) : this._baseConfig;
-			this.config.itemSelector = selector;
+      this.initCounters()
+    },
 
-			this.initCounters();
-
-		},
-
-		/**
+    /**
 		 * Initialization of each Counter of the page.
 		 *
 		 * @return undefined
 		 */
-		initCounters: function() {
+    initCounters: function () {
+      var self = this
 
-			var self = this;
+      appear({
 
-			appear({
+        bounds: self.config.bounds,
+        debounce: self.config.debounce,
 
-				bounds: self.config['bounds'],
-				debounce: self.config['debounce'],
+        init: function () {
+          self.collection.each(function (i, el) {
+            var $item = $(el)
+            var value = parseInt($item.text(), 10)
 
-				init: function() {
+            $item.text('0').data('value', value)
 
-					self.collection.each(function(i, el) {
+            self._pageCollection = self._pageCollection.add($item)
+          })
+        },
 
-						var $item = $(el),
-								value = parseInt($item.text(), 10);
+        elements: function () {
+          return document.querySelectorAll(self.config.itemSelector)
+        },
 
-							$item.text('0').data('value', value);
+        appear: function (el) {
+          var $item = $(el)
+          var counter = 1
+          var endValue = $item.data('value')
+          var iterationValue = parseInt(endValue / ((self.config.time / self.config.fps)), 10)
+          var isCommaSeparated = $item.data('comma-separated')
+          var isReduced = $item.data('reduce-thousands-to')
 
-							self._pageCollection = self._pageCollection.add($item);
+          if (iterationValue == 0) iterationValue = 1
 
-					});
+          $item.data('intervalId', setInterval(function () {
+            if (isCommaSeparated) {
+              $item.text(self.getCommaSeparatedValue(counter += iterationValue))
+            } else if (isReduced) {
+              $item.text(self.getCommaReducedValue(counter += iterationValue, isReduced))
+            } else {
+              $item.text(counter += iterationValue)
+            }
 
-				},
+            if (counter > endValue) {
+              clearInterval($item.data('intervalId'))
+              if (isCommaSeparated) {
+                $item.text(self.getCommaSeparatedValue(endValue))
+              } else if (isReduced) {
+                $item.text(self.getCommaReducedValue(endValue, isReduced))
+              } else {
+                $item.text(endValue)
+              }
+            }
+          }, self.config.time / self.config.fps))
+        }
 
-				elements: function() {
-					return document.querySelectorAll(self.config['itemSelector']);
-				},
+      })
+    },
 
-				appear: function(el) {
-
-					var $item = $(el),
-							counter = 1,
-							endValue = $item.data('value'),
-							iterationValue = parseInt(endValue / ((self.config['time'] / self.config['fps'])), 10),
-							isCommaSeparated = $item.data('comma-separated'),
-							isReduced = $item.data('reduce-thousands-to');
-
-					if(iterationValue == 0) iterationValue = 1;
-
-					$item.data('intervalId', setInterval(function(){
-
-						if(isCommaSeparated){
-
-							$item.text(self.getCommaSeparatedValue(counter+= iterationValue));
-
-						}
-						else if(isReduced) {
-							$item.text(self.getCommaReducedValue(counter+= iterationValue, isReduced));
-						}
-						else {
-
-							$item.text(counter+= iterationValue);
-						}
-
-						if(counter > endValue) {
-
-							clearInterval($item.data('intervalId'));
-							if(isCommaSeparated) {
-								$item.text(self.getCommaSeparatedValue(endValue));
-							}
-							else if(isReduced) {
-								$item.text(self.getCommaReducedValue(endValue, isReduced));
-							}
-							else {
-								$item.text(endValue);
-							}
-
-							return;
-
-						}
-
-					}, self.config['time'] / self.config['fps']));
-
-				}
-
-			});
-
-		},
-
-		/**
+    /**
 		 *
 		 *
 		 * @param Number value
 		 *
 		 * @return String
 		 */
-		getCommaReducedValue: function(value, additionalText) {
+    getCommaReducedValue: function (value, additionalText) {
+      return parseInt(value / 1000, 10) + additionalText
+    },
 
-			return parseInt(value / 1000, 10) + additionalText;
-
-		},
-
-		/**
+    /**
 		 * Returns comma separated value.
 		 *
 		 * @param Number value
 		 *
 		 * @return String
 		 */
-		getCommaSeparatedValue: function(value) {
+    getCommaSeparatedValue: function (value) {
+      value = new String(value)
 
-			value = new String(value);
+      switch (value.length) {
+        case 4:
 
-			switch(value.length) {
+          return value.substr(0, 1) + ',' + value.substr(1)
 
-				case 4:
+          break
 
-					return value.substr(0, 1) + ',' + value.substr(1);
+        case 5:
 
-				break;
+          return value.substr(0, 2) + ',' + value.substr(2)
 
-				case 5:
+          break
 
-					return value.substr(0, 2) + ',' + value.substr(2);
+        case 6:
 
-				break;
+          return value.substr(0, 3) + ',' + value.substr(3)
 
-				case 6:
+          break
+        case 7:
 
-					return value.substr(0, 3) + ',' + value.substr(3);
+          value = value.substr(0, 1) + ',' + value.substr(1)
+          return value.substr(0, 5) + ',' + value.substr(5)
 
-				break;
-				case 7:
+          break
 
-					value = value.substr(0, 1) + ',' + value.substr(1);
-					return value.substr(0, 5) + ',' + value.substr(5);
+        case 8:
 
-				break;
+          value = value.substr(0, 2) + ',' + value.substr(2)
+          return value.substr(0, 6) + ',' + value.substr(6)
 
-				case 8:
+          break
 
-					value = value.substr(0, 2) + ',' + value.substr(2);
-					return value.substr(0, 6) + ',' + value.substr(6);
+        case 9:
 
-				break;
+          value = value.substr(0, 3) + ',' + value.substr(3)
+          return value.substr(0, 7) + ',' + value.substr(7)
 
-				case 9:
+          break
 
-					value = value.substr(0, 3) + ',' + value.substr(3);
-					return value.substr(0, 7) + ',' + value.substr(7);
+        case 10:
 
-				break;
+          value = value.substr(0, 1) + ',' + value.substr(1)
+          value = value.substr(0, 5) + ',' + value.substr(5)
+          return value.substr(0, 9) + ',' + value.substr(9)
 
-				case 10:
+          break
 
-					value = value.substr(0, 1) + ',' + value.substr(1);
-					value = value.substr(0, 5) + ',' + value.substr(5);
-					return value.substr(0, 9) + ',' + value.substr(9);
+        default:
 
-				break;
+          return value
+      }
+    }
 
-				default:
-
-					return value;
-
-			}
-
-		}
-
-	};
-
-})(jQuery);
+  }
+})(jQuery)
