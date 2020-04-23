@@ -1,9 +1,14 @@
 import React from 'react'
 
-import Sample from '../../images/projects/projectSample.jpg'
-// import remote from '../../images/projects/remote.jpg'
-// import fivestar from '../../images/projects/5star.jpeg'
-// import news from '../../images/projects/news-min.jpg'
+import Travel from '../../images/projects/travel.jpeg'
+import Remote from '../../images/projects/remote.jpeg'
+import Daily from '../../images/projects/daily.jpeg'
+import WordGen from '../../images/projects/wordGen.jpeg'
+import News from '../../images/projects/news.jpeg'
+import GenQuestion from '../../images/projects/genQuestion.jpeg'
+import CountQuestion from '../../images/projects/countQuestion.jpg'
+import Resume from '../../images/projects/resume.jpg'
+import Github from '../../images/projects/github.png'
 
 const Project = () => {
   return (
@@ -35,14 +40,14 @@ const Project = () => {
 
           {/* <!-- Cubeportfolio container --> */}
           <div className='cbp' data-controls='#filterControls'>
-            <div className='cbp-item js-business'>
+            <div className='cbp-item js-business js-project'>
               {/* <!-- Figure --> */}
               {/* className='cbp-caption cbp-singlePageInline u-link-v2' */}
               <a href='https://presentation-dem.herokuapp.com/#/' target='blank'>
                 <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                   {/* <!-- Figure Image --> */}
                   <img
-                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description'
+                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Remote} alt='Image Description'
                   />
                   {/* <!-- End Figure Image--> */}
 
@@ -57,13 +62,13 @@ const Project = () => {
               {/* <!-- End Figure --> */}
             </div>
 
-            <div className='cbp-item js-business'>
+            <div className='cbp-item js-business js-project'>
               {/* <!-- Figure --> */}
               <a href='https://5starguides.tungtung.tech/' target='blank'>
                 <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                   {/* <!-- Figure Image --> */}
                   <img
-                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description'
+                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Travel} alt='Image Description'
                   />
                   {/* <!-- End Figure Image--> */}
                   {/* <!-- Figure Caption --> */}
@@ -78,50 +83,48 @@ const Project = () => {
             </div>
 
             <div className='cbp-item js-project js-tool'>
-              {/* <!-- Figure --> */}
-              <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
-                {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
-                {/* <!-- End Figure Image--> */}
-
-                <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-3.html' />
-
-                {/* <!-- Figure Caption --> */}
-                <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
-                  <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>project</em>
-                </figcaption>
-                {/* <!-- End Figure Caption--> */}
-              </figure>
-              {/* <!-- End Figure --> */}
+              <a href='https://huudangdev.github.io/daily/' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Daily} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>Word World</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Daily vocabulary with 5 cards.</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
             </div>
 
-            <div className='cbp-item js-tool js-project'>
-              {/* <!-- Figure --> */}
-              <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
-                {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
-                {/* <!-- End Figure Image--> */}
-
-                <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-4.html' />
-
-                {/* <!-- Figure Caption --> */}
-                <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
-                  <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>tool</em>
-                </figcaption>
-                {/* <!-- End Figure Caption--> */}
-              </figure>
-              {/* <!-- End Figure --> */}
+            <div className='cbp-item js-tool'>
+              <a href='https://github.com/huudangdev/word-generator' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={WordGen} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>Word Generator</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>A demo for generator docx. frontend & backend.</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
             </div>
 
-            <div className='cbp-item js-tool js-mobile'>
+            <div className='cbp-item js-mobile'>
               {/* <!-- Figure --> */}
               <a href='https://github.com/huudangdev/news-react-native' target='blank'>
                 <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
                   {/* <!-- Figure Image --> */}
                   <img
-                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description'
+                    className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={News} alt='Image Description'
                   />
                   {/* <!-- End Figure Image--> */}
                   {/* <!-- Figure Caption --> */}
@@ -135,23 +138,73 @@ const Project = () => {
               {/* <!-- End Figure --> */}
             </div>
 
-            <div className='cbp-item js-project js-tool js-mobile'>
-              {/* <!-- Figure --> */}
-              <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
-                {/* <!-- Figure Image --> */}
-                <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Sample} alt='Image Description' />
-                {/* <!-- End Figure Image--> */}
-
-                <a className='cbp-caption cbp-singlePageInline u-link-v2' href='../ajax/projects/projects-6.html' />
-
-                {/* <!-- Figure Caption --> */}
-                <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
-                  <h4 className='h6 g-font-weight-500 mb-0'>HuuDang</h4>
-                  <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>tool</em>
-                </figcaption>
-                {/* <!-- End Figure Caption--> */}
-              </figure>
-              {/* <!-- End Figure --> */}
+            <div className='cbp-item js-project js-tool'>
+              <a href='https://github.com/huudangdev/generator-question-textblob-nlp' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={GenQuestion} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>Generator Questions Textblob NLP</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Generator questions by scan text. Tools for com</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
+            </div>
+            <div className='cbp-item js-project js-tool'>
+              <a href='https://github.com/huudangdev/cam' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={CountQuestion} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>Scan & Counter question in PDF</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Generator questions by scan text. Tool regex</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
+            </div>
+            <div className='cbp-item js-project'>
+              <a href='https://huudangdev.github.io/Huu-Dang-personal-resume/' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Resume} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>My personal resume 2018</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>Profile CV online v1.0</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
+            </div>
+            <div className='cbp-item js-tool js-mobile'>
+              <a href='https://github.com/huudangdev/github-api-web-search' target='blank'>
+                {/* <!-- Figure --> */}
+                <figure className='u-info-v1-4 g-overflow-hidden mb-0'>
+                  {/* <!-- Figure Image --> */}
+                  <img className='w-100 u-info-v1-4__item-regular g-transition-0_2' src={Github} alt='Image Description' />
+                  {/* <!-- End Figure Image--> */}
+                  {/* <!-- Figure Caption --> */}
+                  <figcaption className='u-info-v1-4__item-hidden g-transition-0_2 g-bg-black g-color-white g-px-30 g-py-10'>
+                    <h4 className='h6 g-font-weight-500 mb-0'>Github tool search & statistical</h4>
+                    <em className='d-block g-color-white-opacity-0_8 g-font-style-normal g-font-size-13'>github API & react</em>
+                  </figcaption>
+                  {/* <!-- End Figure Caption--> */}
+                </figure>
+                {/* <!-- End Figure --> */}
+              </a>
             </div>
           </div>
           {/* <!-- End Cubeportfolio container --> */}
