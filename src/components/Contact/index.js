@@ -15,7 +15,7 @@ const Contact = (props) => {
         <p className='lead g-px-100--md g-mb-20'>
           Have a project for me? Think I'd be a good fit for your team? I'd love to hear from you, give me a shout by email if you'd like to get in contact with me.
         </p>
-        <a href='' className='btn btn-md u-btn-skew u-btn-outline-cyan g-mr-10 g-mb-50' onClick={handleOnclick}>
+        <a href='/' className='btn btn-md u-btn-skew u-btn-outline-cyan g-mr-10 g-mb-50' onClick={handleOnclick}>
           <span className='u-btn-skew__inner'>Get in touch</span>
         </a>
         {isActive &&
@@ -39,7 +39,7 @@ const Contact = (props) => {
             </div>
 
             <div className='text-center'>
-              <button className='btn u-btn-primary text-uppercase g-rounded-30 g-px-25 g-py-13' type='submit' role='button'>Send Message</button>
+              <button className='btn u-btn-primary text-uppercase g-rounded-30 g-px-25 g-py-13' type='submit'>Send Message</button>
             </div>
           </form>}
       </div>
