@@ -9,7 +9,7 @@ const Promo = (props) => {
           <h2 className='g-font-weight-300 g-font-size-40 g-font-size-70--md text-uppercase g-mb-20'>
             <span className='u-text-animation u-text-animation--typing' />
           </h2>
-          <p className='g-font-size-25 g-font-weight-100 text-uppercase'>Fullstack Javascript | Writer</p>
+          <p className='g-font-size-20 g-font-weight-50 text-uppercase'>Fullstack Javascript | Writer</p>
         </div>
 
         <a className='smoothscroll js-go-to btn u-btn-outline-white g-color-white g-bg-white-opacity-0_1 g-color-black--hover g-bg-white--hover g-font-weight-400 text-uppercase g-rounded-50 g-px-30 g-py-13' href='#intro' data-target='#intro'>

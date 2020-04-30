@@ -10,9 +10,9 @@ const Timeline = () => {
     <section id='timeline' className='g-py-100'>
       <div className='container'>
         <div className='text-center g-mb-50 text-uppercase'>
-          <h2 className='h4 g-font-weight-200'>i'm an interactive developer
+          <h4 className='g-font-size-20 g-font-weight-100'>i'm an interactive developer
             <span className='g-color-brown g-ml-5'>who currently work in HCM city</span>
-          </h2>
+          </h4>
         </div>
 
         <ul className='row u-timeline-v2-wrap list-unstyled'>
@@ -37,7 +37,7 @@ const Timeline = () => {
                   </div>
 
                   <header className='g-brd-bottom g-brd-gray-light-v4 g-pb-10 g-mb-25'>
-                    <h3 className='g-font-weight-200 text-uppercase'><span className='g-color-blue'>First Step</span>| Tran Hung Dao specialized & gifted high school</h3>
+                    <h3 className='g-font-size-20 g-font-weight-200 text-uppercase'><span className='g-color-blue'>First Step</span>| Tran Hung Dao specialized & gifted high school</h3>
                   </header>
 
                   <div className='row'>
@@ -77,7 +77,7 @@ const Timeline = () => {
                   </div>
 
                   <header className='g-brd-bottom g-brd-gray-light-v4 g-pb-10 g-mb-25'>
-                    <h3 className='g-font-weight-200 text-uppercase'><span className='g-color-blue'>First environment</span>| University of Information Technology</h3>
+                    <h3 className='g-font-size-20 g-font-weight-200 text-uppercase'><span className='g-color-blue'>First environment</span>| University of Information Technology</h3>
                   </header>
 
                   <div className='row'>
@@ -117,7 +117,7 @@ const Timeline = () => {
                   </div>
 
                   <header className='g-brd-bottom g-brd-gray-light-v4 g-pb-10 g-mb-25'>
-                    <h3 className='g-font-weight-200 text-uppercase'><span className='g-color-blue'>sprint up</span>| Gameloft SEA</h3>
+                    <h3 className='g-font-size-20 g-font-weight-200 text-uppercase'><span className='g-color-blue'>sprint up</span>| Gameloft SEA</h3>
                   </header>
 
                   <div className='row'>
@@ -157,7 +157,7 @@ const Timeline = () => {
                   </div>
 
                   <header className='g-brd-bottom g-brd-gray-light-v4 g-pb-10 g-mb-25'>
-                    <h3 className='g-font-weight-200 text-uppercase'><span className='g-color-blue'>Level up</span>| tungtung - Global competency platform</h3>
+                    <h3 className='g-font-size-20 g-font-weight-200 text-uppercase'><span className='g-color-blue'>Level up</span>| tungtung - Global competency platform</h3>
                   </header>
 
                   <div className='row'>

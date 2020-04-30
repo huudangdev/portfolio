@@ -22,7 +22,7 @@ const Project = () => {
                 <h2 className='h4 text-uppercase mb-3'>CHECK OUT SOME OF MY WORK.</h2>
                 <div className='d-inline-block g-width-60 g-height-1 g-bg-black mb-2' />
                 <p className='mb-0'>
-                  {/* I'm not only a tinkerer but i'm also interested in playing around with new technologies. */}
+                The following are only public projects. There are still projects that are gradually being refined or not being deployed or private
                 </p>
               </div>
             </div>
