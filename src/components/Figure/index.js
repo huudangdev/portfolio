@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import me1 from '../../images/me/me-1.jpg'
 import me2 from '../../images/me/me-2.jpg'
 import me3 from '../../images/me/me-3.jpg'
 
-import moment from 'moment'
-
-const config = require('./data.json')
-
-const Figure = () => {
+const Figure = (props) => {
   const [isActive, setIsActive] = useState(false)
-  const [index, setIndex] = useState({})
+  const [index, setIndex] = useState(props.index)
+
+  useEffect(() => {
+    setIndex(props.index)
+  }, [props.index])
 
   const handleOnClick = (event) => {
     event.preventDefault()
     setIsActive(true)
   }
-
-  useEffect(() => {
-    const a = moment([2020, 1, 22])
-    const b = moment()
-    const tmpArg = b.diff(a, 'days')
-    config.viewed = 4 * tmpArg
-    config.contacted = Math.round(tmpArg * 1.5)
-    //
-    config.workingHours = tmpArg * 32
-    setIndex(config)
-  }, [])
 
   return (
     <>
@@ -93,22 +83,22 @@ const Figure = () => {
 
           <div className='row text-center text-uppercase'>
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.viewed}</div>
+              <div className='g-font-size-25 g-font-weight-300 g-mb-7'>{index.viewed}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Viewed</h4>
             </div>
 
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.contacted}</div>
+              <div className='g-font-size-25 g-font-weight-300 g-mb-7'>{index.contacted}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Contacted</h4>
             </div>
-
+            {/* <!--js-counter div level 2--> */}
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.workingHours}</div>
+              <div className='g-font-size-25 g-font-weight-300 g-mb-7'>{index.working_hour}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Working Hours</h4>
             </div>
 
             <div className='col-lg-3 col-sm-6 g-mb-50'>
-              <div className='js-counter g-font-size-25 g-font-weight-300 g-mb-7'>{index.projects}</div>
+              <div className='g-font-size-25 g-font-weight-300 g-mb-7'>{index.projects}</div>
               <h4 className='h5 g-color-gray-dark-v4'>Projects</h4>
             </div>
           </div>
