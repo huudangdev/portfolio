@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 import Promo from '../../components/Promo'
 import Testimonial from '../../components/Testimonial'
@@ -9,10 +10,27 @@ import Technicals from '../../components/Technicals'
 import Timeline from '../../components/Timeline'
 
 const About = () => {
+  const [index, setIndex] = useState({})
+
+  useEffect(() => {
+    const configData = async () => {
+      // const a = moment([2020, 1, 22])
+      // const b = moment()
+      // const tmpArg = b.diff(a, 'days')
+
+      const res = await axios.get('http://13.229.230.229:3000/statistic')
+
+      setIndex(res.data)
+    }
+
+    configData()
+    // console.log(index)
+  }, [])
+
   return (
     <>
       <Promo />
-      <Figure />
+      <Figure index={index} />
       <Technicals />
       <Timeline />
       <Project />

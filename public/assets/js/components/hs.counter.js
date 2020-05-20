@@ -85,7 +85,7 @@
           var isCommaSeparated = $item.data('comma-separated')
           var isReduced = $item.data('reduce-thousands-to')
 
-          if (iterationValue == 0) iterationValue = 1
+          if (iterationValue === 0) iterationValue = 1
 
           $item.data('intervalId', setInterval(function () {
             if (isCommaSeparated) {
